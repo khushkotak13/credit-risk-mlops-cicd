@@ -1,0 +1,16 @@
+data:
+  v1_path: data/credit_card_customers_v1.csv
+  v2_path: data/credit_card_customers_v2.csv
+  target: High_Risk_Customer
+training:
+  random_seed: 42
+mlflow:
+  experiment_name: credit-risk-cicd-gate
+  tracking_uri: mlruns
+quality_gate:
+  thresholds:
+    accuracy: 0.8
+    precision: 0.5
+    recall: 0.8
+    f1: 0.6
+    roc_auc: 0.85
